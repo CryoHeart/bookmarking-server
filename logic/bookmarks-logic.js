@@ -32,7 +32,7 @@ async function removeBookmark(id) {
 
 async function addBookmark(newBookmark) {
     try {
-        await validateIfExists(newBookmark);
+        //await validateIfExists(newBookmark);
         const successfullySavedBookmark = await bookmarksDao.addBookmark(newBookmark);
         return successfullySavedBookmark;
     }
@@ -46,7 +46,7 @@ async function addBookmark(newBookmark) {
 
 async function editBookmark(editedBookmark) {
     try {
-        validateIfExists(editedBookmark);
+        //validateIfExists(editedBookmark);
         await bookmarksDao.editBookmark(editedBookmark);
         return editedBookmark;
     }
